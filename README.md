@@ -1,2 +1,10 @@
 # x86_64 BootLoader
- A from-scratch bootloader for x86_64 written in asm.
+
+Most guides attempting to help guide users through the process of enabling a 64-bit 
+operating mode on x86/AMD64 platforms often requires the use of protected 32-bit 
+mode as an intermediate to facilitate the initialization of the C runtime *before*
+moving to a 64-bit operating environment.
+
+Conversely, this simple homegrown bootloader skips this process by immediately disabling
+the memory paging function that is signature for protected 32-bit mode and proceeding 
+directly to enable a long mode linear memory mapping.
